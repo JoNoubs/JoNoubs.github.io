@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Johanna Fokui's Personal Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Johanna Fokui - AI & Data Science Student</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <h1>Hello, I’m Johanna Fokui! 👋</h1>
-  <p>I’m a 3rd-year AI & Data Science student at AIVANCITY, passionate about ethical tech and solving real problems with data and AI.</p>
-  <p>Check out my <a href="https://github.com/JoNoubs">GitHub projects</a>!</p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Hi, I’m Johanna Fokui! 👋</h1>
+    <p>I’m a 3rd-year student in <strong>AI & Data Science</strong> at AIVANCITY, passionate about using data and AI to solve real problems with an ethical focus. I love diving into datasets, building smart solutions, and creating visuals that bring insights to life!</p>
+    <p>🎯 I’m seeking a <strong>2-year apprenticeship</strong> in <strong>Data Science</strong>, <strong>AI</strong>, or <strong>Data/Business Analysis</strong> starting September 2025 (available from July, 3 weeks in company / 1 week in school).</p>
+  </section>
+
+  <section id="experience">
+    <h2>Recent Experience</h2>
+    <div class="experience-item">
+      <h3>📍 BeSignal | Data Scientist | Jan – Mar 2025</h3>
+      <p>→ Built an automated anonymization pipeline for sensitive employee alerts using BERT & GPT models<br>
+      → Compared LLMs for sensitive data anonymization in compliance with GDPR</p>
+    </div>
+    <div class="experience-item">
+      <h3>📍 Métapolis & Région Île-de-France | Data Scientist | Sep – Dec 2024</h3>
+      <p>→ Developed a Retrieval-Augmented Generation (RAG) system to improve communication with schools<br>
+      → Used embedding models (text-embedding-ada-002) + web scraping to power relevant Q&A systems</p>
+    </div>
+    <div class="experience-item">
+      <h3>📍 Yakoota | Data Scientist | Sep – Dec 2024</h3>
+      <p>→ Automated extraction of tables and text from insurance PDFs using YOLO (fine-tuned), Label Studio<br>
+      → Benchmarked extraction methods for structured output</p>
+    </div>
+    <div class="experience-item">
+      <h3>📍 SOFOMEUTEX (Cameroon) | Assistant Accountant | Apr – Jul 2024</h3>
+      <p>→ Built a sales prediction model in Excel (86% accuracy) to optimize inventory<br>
+      → Generated monthly reports and handled container inventory verification</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-item">
+      <h3>Sentiment Analysis with BERT</h3>
+      <p>Developed a sentiment analysis model using BERT to classify text (e.g., reviews or social media posts) as positive, negative, or neutral, leveraging BERT’s contextual understanding for accurate predictions. <a href="https://github.com/JoNoubs/Sentiment-Analysis-BERT">View Project</a></p>
+    </div>
+    <div class="project-item">
+      <h3>AI Article Detection with BERT & UMAP</h3>
+      <p>Built a system to classify articles as AI-related or not using web scraping, BERT embeddings, UMAP for visualization, and a logistic regression classifier. Added anomaly detection for robustness.</p>
+    </div>
+    <div class="project-item">
+      <h3>Wikipedia Topic Clustering</h3>
+      <p>Scraped Wikipedia articles on diverse topics (AI, Law, History, etc.), used TF-IDF and UMAP for dimensionality reduction, and applied k-Means clustering to visualize relationships between fields.</p>
+    </div>
+    <div class="project-item">
+      <h3>Image Color Palette Extraction</h3>
+      <p>Developed a tool to extract dominant colors from images using KMeans clustering with OpenCV and Matplotlib, showcasing the color palette in a visual format.</p>
+    </div>
+    <div class="project-item">
+      <h3>Tic-Tac-Toe Game with AI</h3>
+      <p>Created a Python-based Tic-Tac-Toe game with a computer player using random move selection, featuring a dynamic board size and win detection logic.</p>
+    </div>
+    <div class="project-item">
+      <h3>Real-Time Object Detection with YOLOv5</h3>
+      <p>Implemented a real-time object detection system using YOLOv5 and OpenCV, displaying detected objects with bounding boxes and confidence scores via webcam feed.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let’s connect! I’m open to opportunities in ethical tech, data science, and AI.</p>
+    <ul>
+      <li><strong>LinkedIn</strong>: <a href="https://linkedin.com/in/johanna-grace-fokui-noubi-18006022b/">Johanna Grace Fokui Noubi</a></li>
+      <li><strong>Email</strong>: <a href="mailto:Johanna.fokui@aivancity.education">Johanna.fokui@aivancity.education</a></li>
+      <li><strong>GitHub</strong>: <a href="https://github.com/JoNoubs">JoNoubs</a></li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.querySelector('#theme-toggle i');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    }
+  </script>
 </body>
 </html>
