@@ -1,109 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Johanna Fokui - AI & Data Science Student</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johanna Fokui - AI & Data Science Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#3B82F6',
+                        'custom-dark-blue': '#1D4ED8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <button id="theme-toggle" onclick="toggleTheme()">
-            <i class="fas fa-moon"></i>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+<body class="bg-gray-50">
+    <div class="drawer drawer-mobile">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col">
+            <!-- Fixed Navbar -->
+            <div class="fixed top-0 left-0 right-0 z-30">
+                <div class="navbar bg-white shadow-md">
+                    <div class="flex-none lg:hidden">
+                        <label for="my-drawer-3" class="btn btn-square btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </label>
+                    </div>
+                    <div class="flex-1 px-2 mx-2 text-xl font-semibold">Johanna Fokui</div>
+                    <div class="flex-none hidden lg:block">
+                        <ul class="menu menu-horizontal">
+                            <li><a href="#about" class="text-gray-700 hover:text-custom-blue">About</a></li>
+                            <li><a href="#experience" class="text-gray-700 hover:text-custom-blue">Experience</a></li>
+                            <li><a href="#projects" class="text-gray-700 hover:text-custom-blue">Projects</a></li>
+                            <li><a href="#education" class="text-gray-700 hover:text-custom-blue">Education</a></li>
+                            <li><a href="#contact" class="text-gray-700 hover:text-custom-blue">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed top-20 right-4 z-20 flex flex-col space-y-4">
+                <a href="https://linkedin.com/in/johanna-grace-fokui-noubi-18006022b/" target="_blank" rel="noopener noreferrer" class="text-custom-blue hover:text-custom-dark-blue transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/JoNoubs" target="_blank" rel="noopener noreferrer" class="text-custom-blue hover:text-custom-dark-blue transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="pt-16"></div>
+            <!-- Main Content -->
+            <div class="container mx-auto px-4 py-12">
+                <section id="about" class="mb-20">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3">
+                                <img src="JOHANNA.jpg" alt="Johanna Fokui" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-2/3 p-8">
+                                <h1 class="text-3xl font-bold mb-4 text-gray-800">Johanna Fokui</h1>
+                                <p class="text-xl mb-6 text-gray-700">AI & Data Science Student | Ethical Tech Enthusiast</p>
+                                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                    Welcome to my personal website! I’m a 3rd-year student in <strong>AI & Data Science</strong> at AIVANCITY, passionate about using data and AI to solve real problems with an ethical focus. I love diving into datasets, building smart solutions, and creating visuals that bring insights to life!
+                                </p>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    🎯 I’m seeking a <strong>2-year apprenticeship</strong> in <strong>Data Science</strong>, <strong>AI</strong>, or <strong>Data/Business Analysis</strong> starting September 2025 (available from July, 3 weeks in company / 1 week in school).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-  <section id="home">
-    <h1>Hi, I’m Johanna Fokui! 👋</h1>
-    <p>I’m a 3rd-year student in <strong>AI & Data Science</strong> at AIVANCITY, passionate about using data and AI to solve real problems with an ethical focus. I love diving into datasets, building smart solutions, and creating visuals that bring insights to life!</p>
-    <p>🎯 I’m seeking a <strong>2-year apprenticeship</strong> in <strong>Data Science</strong>, <strong>AI</strong>, or <strong>Data/Business Analysis</strong> starting September 2025 (available from July, 3 weeks in company / 1 week in school).</p>
-  </section>
+                <section id="experience" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Recent Experience</h2>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">📍 BeSignal | Data Scientist | Jan – Mar 2025</h3>
+                        <p class="text-gray-700 mb-4">
+                            → Built an automated anonymization pipeline for sensitive employee alerts using BERT & GPT models<br>
+                            → Compared LLMs for sensitive data anonymization in compliance with GDPR
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">📍 Métapolis & Région Île-de-France | Data Scientist | Sep – Dec 2024</h3>
+                        <p class="text-gray-700 mb-4">
+                            → Developed a Retrieval-Augmented Generation (RAG) system to improve communication with schools<br>
+                            → Used embedding models (text-embedding-ada-002) + web scraping to power relevant Q&A systems
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">📍 Yakoota | Data Scientist | Sep – Dec 2024</h3>
+                        <p class="text-gray-700 mb-4">
+                            → Automated extraction of tables and text from insurance PDFs using YOLO (fine-tuned), Label Studio<br>
+                            → Benchmarked extraction methods for structured output
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">📍 SOFOMEUTEX (Cameroon) | Assistant Accountant | Apr – Jul 2024</h3>
+                        <p class="text-gray-700 mb-4">
+                            → Built a sales prediction model in Excel (86% accuracy) to optimize inventory<br>
+                            → Generated monthly reports and handled container inventory verification
+                        </p>
+                    </div>
+                </section>
 
-  <section id="experience">
-    <h2>Recent Experience</h2>
-    <div class="experience-item">
-      <h3>📍 BeSignal | Data Scientist | Jan – Mar 2025</h3>
-      <p>→ Built an automated anonymization pipeline for sensitive employee alerts using BERT & GPT models<br>
-      → Compared LLMs for sensitive data anonymization in compliance with GDPR</p>
-    </div>
-    <div class="experience-item">
-      <h3>📍 Métapolis & Région Île-de-France | Data Scientist | Sep – Dec 2024</h3>
-      <p>→ Developed a Retrieval-Augmented Generation (RAG) system to improve communication with schools<br>
-      → Used embedding models (text-embedding-ada-002) + web scraping to power relevant Q&A systems</p>
-    </div>
-    <div class="experience-item">
-      <h3>📍 Yakoota | Data Scientist | Sep – Dec 2024</h3>
-      <p>→ Automated extraction of tables and text from insurance PDFs using YOLO (fine-tuned), Label Studio<br>
-      → Benchmarked extraction methods for structured output</p>
-    </div>
-    <div class="experience-item">
-      <h3>📍 SOFOMEUTEX (Cameroon) | Assistant Accountant | Apr – Jul 2024</h3>
-      <p>→ Built a sales prediction model in Excel (86% accuracy) to optimize inventory<br>
-      → Generated monthly reports and handled container inventory verification</p>
-    </div>
-  </section>
+                <section id="projects" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Some Projects</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Sentiment Analysis with BERT</h3>
+                                <p class="text-gray-700 mb-4">Developed a sentiment analysis model using BERT to classify text (e.g., reviews or social media posts) as positive, negative, or neutral, leveraging BERT’s contextual understanding for accurate predictions.</p>
+                                <a href="https://github.com/JoNoubs/Sentiment-Analysis-BERT" class="btn bg-custom-blue hover:bg-custom-dark-blue text-white" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">AI Article Detection with BERT & UMAP</h3>
+                                <p class="text-gray-700 mb-4">Built a system to classify articles as AI-related or not using web scraping, BERT embeddings, UMAP for visualization, and a logistic regression classifier. Added anomaly detection for robustness.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Wikipedia Topic Clustering</h3>
+                                <p class="text-gray-700 mb-4">Scraped Wikipedia articles on diverse topics (AI, Law, History, etc.), used TF-IDF and UMAP for dimensionality reduction, and applied k-Means clustering to visualize relationships between fields.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Image Color Palette Extraction</h3>
+                                <p class="text-gray-700 mb-4">Developed a tool to extract dominant colors from images using KMeans clustering with OpenCV and Matplotlib, showcasing the color palette in a visual format.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Tic-Tac-Toe Game with AI</h3>
+                                <p class="text-gray-700 mb-4">Created a Python-based Tic-Tac-Toe game with a computer player using random move selection, featuring a dynamic board size and win detection logic.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Real-Time Object Detection with YOLOv5</h3>
+                                <p class="text-gray-700 mb-4">Implemented a real-time object detection system using YOLOv5 and OpenCV, displaying detected objects with bounding boxes and confidence scores via webcam feed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-item">
-      <h3>Sentiment Analysis with BERT</h3>
-      <p>Developed a sentiment analysis model using BERT to classify text (e.g., reviews or social media posts) as positive, negative, or neutral, leveraging BERT’s contextual understanding for accurate predictions. <a href="https://github.com/JoNoubs/Sentiment-Analysis-BERT">View Project</a></p>
-    </div>
-    <div class="project-item">
-      <h3>AI Article Detection with BERT & UMAP</h3>
-      <p>Built a system to classify articles as AI-related or not using web scraping, BERT embeddings, UMAP for visualization, and a logistic regression classifier. Added anomaly detection for robustness.</p>
-    </div>
-    <div class="project-item">
-      <h3>Wikipedia Topic Clustering</h3>
-      <p>Scraped Wikipedia articles on diverse topics (AI, Law, History, etc.), used TF-IDF and UMAP for dimensionality reduction, and applied k-Means clustering to visualize relationships between fields.</p>
-    </div>
-    <div class="project-item">
-      <h3>Image Color Palette Extraction</h3>
-      <p>Developed a tool to extract dominant colors from images using KMeans clustering with OpenCV and Matplotlib, showcasing the color palette in a visual format.</p>
-    </div>
-    <div class="project-item">
-      <h3>Tic-Tac-Toe Game with AI</h3>
-      <p>Created a Python-based Tic-Tac-Toe game with a computer player using random move selection, featuring a dynamic board size and win detection logic.</p>
-    </div>
-    <div class="project-item">
-      <h3>Real-Time Object Detection with YOLOv5</h3>
-      <p>Implemented a real-time object detection system using YOLOv5 and OpenCV, displaying detected objects with bounding boxes and confidence scores via webcam feed.</p>
-    </div>
-  </section>
+                <section id="education" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Education</h2>
+                    <ul class="timeline">
+                        <li class="mb-8">
+                            <div class="timeline-start text-custom-blue font-semibold">2022 - Present</div>
+                            <div class="timeline-end timeline-box bg-white p-4 rounded-lg shadow">
+                                <h3 class="font-semibold text-lg mb-2">Bac+5 in AI & Data Science</h3>
+                                <p class="text-gray-700">AIVANCITY School for Technology, Business & Society, Paris</p>
+                            </div>
+                        </li>
+                        <!-- Add more education entries if applicable -->
+                    </ul>
+                </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Let’s connect! I’m open to opportunities in ethical tech, data science, and AI.</p>
-    <ul>
-      <li><strong>LinkedIn</strong>: <a href="https://linkedin.com/in/johanna-grace-fokui-noubi-18006022b/">Johanna Grace Fokui Noubi</a></li>
-      <li><strong>Email</strong>: <a href="mailto:Johanna.fokui@aivancity.education">Johanna.fokui@aivancity.education</a></li>
-      <li><strong>GitHub</strong>: <a href="https://github.com/JoNoubs">JoNoubs</a></li>
-    </ul>
-  </section>
-
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-      const icon = document.querySelector('#theme-toggle i');
-      if (document.body.classList.contains('dark-mode')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-      }
-    }
-  </script>
+                <section id="contact" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Contact</h2>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <p class="text-lg text-gray-700 mb-2">Email: <a href="mailto:Johanna.fokui@aivancity.education">Johanna.fokui@aivancity.education</a></p>
+                        <p class="text-lg text-gray-700 mb-4">Location: Paris, France</p>
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com/in/johanna-grace-fokui-noubi-18006022b/" target="_blank" class="btn bg-custom-blue hover:bg-custom-dark-blue text-white">LinkedIn</a>
+                            <a href="https://github.com/JoNoubs" class="btn bg-custom-blue hover:bg-custom-dark-blue text-white" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer class="bg-white shadow-md p-4 text-center">
+                <p class="text-gray-700">© 2025 Johanna Fokui. All rights reserved.</p>
+            </footer>
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer-3" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 h-full bg-base-200 pt-20">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
