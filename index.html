@@ -169,6 +169,12 @@
   .why { margin-top: 16px; color: var(--body); font-size: 16px; min-height: 1.5em; }
   .qnext { margin-top: 14px; }
 
+  .how { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .how div { background: var(--soft); border-radius: 24px; padding: 28px 24px; transition: transform .2s; }
+  .how div:hover { transform: translateY(-4px); }
+  .how b { display: block; color: var(--gold-deep); font-size: 15px; font-weight: 600; margin-bottom: 14px; }
+  .how h4 { font-size: 22px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; margin-bottom: 10px; }
+  .how p { color: var(--body); font-size: 16px; }
   .talk { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .card { border: 1px solid var(--line); border-radius: 28px; padding: 32px; }
   .card h3 { font-size: 26px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 10px; }
@@ -250,6 +256,7 @@
     .numbers div:nth-child(3) { border-left: 0; padding-left: 0; }
     .numbers div:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.16); }
     .more, .bgline { grid-template-columns: 1fr; }
+    .how { grid-template-columns: 1fr 1fr; }
     .topbar nav a:not(.btn) { display: none; }
     .photo { max-width: 380px; margin-left: 14px; }
     .photo .tag { left: -10px; }
@@ -261,6 +268,7 @@
   }
   @media (max-width: 520px) {
     .wrap { padding: 0 20px; }
+    .how { grid-template-columns: 1fr; }
     .scene { padding: 24px 16px; }
     .qbox { padding: 22px 18px; }
     .hud-btn span { display: none; }
@@ -451,6 +459,20 @@
     </div>
   </section>
 
+
+  <section id="how">
+    <div class="wrap">
+      <p class="kicker">How I work</p>
+      <h2 class="reveal">Four habits behind every project.</h2>
+      <p class="intro reveal">The same method, whether it is a company assistant or a weekend side project.</p>
+      <div class="how reveal">
+        <div><b>01</b><h4>I start from one real person.</h4><p>A medical student, future math teachers, a restaurant team. I build for their need, not for the technology.</p></div>
+        <div><b>02</b><h4>I measure before I claim.</h4><p>A set of real questions before saying "it works", and every answer traced in Langfuse, so I know why it is right or wrong.</p></div>
+        <div><b>03</b><h4>I ship small, with tests.</h4><p>Almost daily TestFlight builds, protected by 350+ UI tests.</p></div>
+        <div><b>04</b><h4>I write my decisions down.</h4><p>Every important choice is recorded with its reason: 18 architecture decisions documented for Mnésie, and LLM wikis so teams keep the memory of their choices.</p></div>
+      </div>
+    </div>
+  </section>
 
   <section id="talk">
     <div class="wrap">
