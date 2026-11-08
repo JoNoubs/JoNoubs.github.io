@@ -214,26 +214,6 @@
   .dock .btn { padding: 7px 16px; font-size: 14px; background: var(--night); border-color: var(--night); color: #fff; }
   section, #contact { scroll-margin-top: 70px; }
   @media (max-width: 760px) { .dock nav a:not(.btn) { display: none; } }
-  /* game HUD */
-  .hud { position: fixed; right: 20px; bottom: 20px; z-index: 10; }
-  .hud-btn { display: flex; align-items: center; gap: 10px; background: var(--night); color: #fff; border: 0; border-radius: 999px; padding: 8px 16px 8px 8px; box-shadow: 0 14px 34px rgba(19,39,94,.35); font-size: 14px; font-weight: 500; }
-  .ring { width: 34px; height: 34px; }
-  .ring circle { fill: none; stroke-width: 4; }
-  .ring .bgc { stroke: rgba(255,255,255,.18); }
-  .ring .fg { stroke: var(--gold); stroke-linecap: round; transform: rotate(-90deg); transform-origin: 50% 50%; transition: stroke-dashoffset .6s ease; }
-  .hud-panel { position: absolute; right: 0; bottom: 58px; width: 300px; background: #fff; border-radius: 20px; box-shadow: 0 24px 60px rgba(19,39,94,.25); padding: 20px; display: none; }
-  .hud.open .hud-panel { display: block; animation: pop .25s ease-out; }
-  .hud-panel h5 { font-size: 16px; margin-bottom: 4px; }
-  .hud-panel p { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
-  .hud-panel li { list-style: none; display: flex; gap: 10px; align-items: center; font-size: 14px; padding: 7px 0; border-top: 1px solid var(--line); color: var(--muted); }
-  .hud-panel li i { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--line); flex: none; display: grid; place-items: center; font-style: normal; font-size: 11px; }
-  .hud-panel li.done { color: var(--ink); }
-  .hud-panel li.done i { background: var(--gold); border-color: var(--gold); color: var(--night); }
-  .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 160%); background: #fff; color: var(--ink); border-radius: 16px; padding: 12px 18px 12px 12px; box-shadow: 0 20px 50px rgba(19,39,94,.3); display: flex; gap: 12px; align-items: center; z-index: 11; transition: transform .45s cubic-bezier(.2,.8,.2,1.2); font-size: 15px; max-width: calc(100% - 32px); }
-  .toast.show { transform: translate(-50%, 0); }
-  .toast .medal { width: 38px; height: 38px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; color: var(--night); font-weight: 700; flex: none; }
-  .toast small { display: block; color: var(--gold-deep); font-weight: 600; font-size: 12px; }
-
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
   .reveal.in { opacity: 1; transform: none; }
 
@@ -271,8 +251,6 @@
     .how { grid-template-columns: 1fr; }
     .scene { padding: 24px 16px; }
     .qbox { padding: 22px 18px; }
-    .hud-btn span { display: none; }
-    .hud-btn { padding: 8px; }
   }
 </style>
 </head>
