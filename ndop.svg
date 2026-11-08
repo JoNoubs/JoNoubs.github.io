@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <rect width="240" height="240" fill="#1f3c8c"/>
+  <g fill="none" stroke="#f1ede3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left band: stacked lozenges -->
+    <line x1="4" y1="0" x2="4" y2="240" stroke-width="3"/>
+    <line x1="56" y1="0" x2="56" y2="240" stroke-width="3"/>
+    <path d="M30 6 L50 34 L30 62 L10 34 Z M30 66 L50 94 L30 122 L10 94 Z M30 126 L50 154 L30 182 L10 154 Z M30 186 L50 214 L30 242 L10 214 Z" stroke-width="3.5"/>
+    <path d="M30 22 L39 34 L30 46 L21 34 Z M30 82 L39 94 L30 106 L21 94 Z M30 142 L39 154 L30 166 L21 154 Z M30 202 L39 214 L30 226 L21 214 Z" fill="#f1ede3" stroke="none"/>
+    <!-- middle: wheels with cross -->
+    <circle cx="112" cy="58" r="34" stroke-width="4"/>
+    <circle cx="112" cy="58" r="22" stroke-width="2.5"/>
+    <path d="M112 24 V92 M78 58 H146" stroke-width="3"/>
+    <circle cx="112" cy="58" r="5" fill="#f1ede3" stroke="none"/>
+    <!-- middle: zigzag rows -->
+    <path d="M76 116 L88 104 L100 116 L112 104 L124 116 L136 104 L148 116" stroke-width="3.5"/>
+    <path d="M76 132 L88 120 L100 132 L112 120 L124 132 L136 120 L148 132" stroke-width="3.5"/>
+    <!-- middle: second wheel -->
+    <circle cx="112" cy="190" r="30" stroke-width="4"/>
+    <path d="M91 169 L133 211 M133 169 L91 211" stroke-width="3"/>
+    <circle cx="112" cy="190" r="6" fill="#f1ede3" stroke="none"/>
+    <!-- dotted line -->
+    <g fill="#f1ede3" stroke="none">
+      <circle cx="80" cy="150" r="3"/><circle cx="92" cy="150" r="3"/><circle cx="104" cy="150" r="3"/><circle cx="116" cy="150" r="3"/><circle cx="128" cy="150" r="3"/><circle cx="140" cy="150" r="3"/>
+    </g>
+    <!-- right band: comb stripes and dots -->
+    <line x1="168" y1="0" x2="168" y2="240" stroke-width="3"/>
+    <line x1="236" y1="0" x2="236" y2="240" stroke-width="3"/>
+    <path d="M176 12 H228 M176 24 H228 M176 36 H228" stroke-width="3"/>
+    <path d="M182 56 L202 76 L222 56 M182 76 L202 96 L222 76" stroke-width="3.5"/>
+    <g fill="#f1ede3" stroke="none">
+      <circle cx="184" cy="116" r="4"/><circle cx="202" cy="116" r="4"/><circle cx="220" cy="116" r="4"/>
+      <circle cx="193" cy="132" r="4"/><circle cx="211" cy="132" r="4"/>
+      <circle cx="184" cy="148" r="4"/><circle cx="202" cy="148" r="4"/><circle cx="220" cy="148" r="4"/>
+    </g>
+    <path d="M176 172 H228 M176 184 H228" stroke-width="3"/>
+    <path d="M202 196 L222 216 L202 236 L182 216 Z" stroke-width="3.5"/>
+    <path d="M202 208 L210 216 L202 224 L194 216 Z" fill="#f1ede3" stroke="none"/>
+  </g>
+</svg>
